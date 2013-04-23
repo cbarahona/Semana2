@@ -27,7 +27,10 @@ void Enemy::logic()
     if(x<-100)
         x=1000;
 }
-
+void Enemy::setX()
+{
+this->x=x-3;
+}
 void Enemy::jump()
 {
     velocity=-30;

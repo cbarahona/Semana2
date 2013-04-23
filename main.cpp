@@ -4,7 +4,7 @@ and may not be redistributed without written permission.*/
 //The headers
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
-#include "SDL/SDL_ttf.h"
+//#include "SDL/SDL_ttf.h"
 #include "Background.h"
 #include "Player.h"
 #include "Enemy.h"
@@ -59,6 +59,7 @@ int main( int argc, char* args[] )
     Background background(screen);
     Player player(screen);
     Enemy enemy(screen);
+    Enemy enemy2(screen);
 
     SDL_Event event;
     //Quit flag
@@ -89,20 +90,24 @@ int main( int argc, char* args[] )
         background.logic();
         player.logic();
         enemy.logic();
-
+        //enemy2.logic();
+        //enemy2.setX();
         if(player.x-enemy.x<50
            && player.x-enemy.x>-50
            && player.y-enemy.y<50
            && player.y-enemy.y>-50
            )
-        {
-           break;
-        }
+            {
+            player.setZD();
+            if(player.zd==6){
+            break;
+            }
+            }
 
         background.render();
         player.render();
         enemy.render();
-
+        //enemy2.render();
         frameCap();
 
         //Update the screen
@@ -138,7 +143,6 @@ int main( int argc, char* args[] )
         SDL_Rect offset;
         offset.x = 0;
         offset.y = 0;
-
         SDL_BlitSurface( game_over, NULL, screen, &offset );
 
         frameCap();

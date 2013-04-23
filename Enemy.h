@@ -3,7 +3,7 @@
 
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
-#include "SDL/SDL_ttf.h"
+//#include "SDL/SDL_ttf.h"
 #include <string>
 
 class Enemy
@@ -18,9 +18,11 @@ public:
     SDL_Surface *screen;
 
     Enemy(SDL_Surface *screen);
+    void setX();
     void logic();
     void render();
     void jump();
+
     virtual ~Enemy();
 };
 
