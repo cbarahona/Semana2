@@ -68,7 +68,7 @@ void Player::render(){
     if(this->velocity==10){
         this->zd=0;
     }
-    }else if(zd>=3){
+    }else if(zd=3){
 
     offset.x = x - images[current_frame]->w/2;
     offset.y = y - images[current_frame]->h/2;
@@ -76,7 +76,9 @@ void Player::render(){
     SDL_BlitSurface( images[current_frame], NULL, screen, &offset );
 
     current_frame++;
-    zd++;
+    if(current_frame>9)
+        current_frame=5;
+
     }
 }
 void Player::setZD(){

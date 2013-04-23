@@ -96,12 +96,17 @@ int main( int argc, char* args[] )
            && player.x-enemy.x>-50
            && player.y-enemy.y<50
            && player.y-enemy.y>-50
-           )
-            {
-            player.setZD();
-            if(player.zd==6){
-            break;
-            }
+           ){
+
+                player.setZD();
+           // for(int x=5;x<10;x++){
+
+             //   player.render();
+               // background.render();
+                //enemy.render();
+            //SDL_Delay(100);
+            //}
+
             }
 
         background.render();
