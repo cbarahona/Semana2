@@ -20,6 +20,7 @@ Player::Player(SDL_Surface *screen)
     this->velocity=0;
     this->current_frame=0;
     this->zd=0;
+    this->gameover=false;
 }
 
 Player::~Player()
@@ -29,6 +30,12 @@ Player::~Player()
     SDL_FreeSurface( images[2] );
     SDL_FreeSurface( images[3] );
     SDL_FreeSurface( images[4] );
+    SDL_FreeSurface( images[5] );
+    SDL_FreeSurface( images[6] );
+    SDL_FreeSurface( images[7] );
+    SDL_FreeSurface( images[8] );
+    SDL_FreeSurface( images[9] );
+
 }
 
 void Player::logic()
@@ -65,7 +72,7 @@ void Player::render(){
     offset.y = y - images[4]->h/2;
 
     SDL_BlitSurface( images[4], NULL, screen, &offset );
-    if(this->velocity==10){
+    if(this->y==372){
         this->zd=0;
     }
     }else if(zd=3){
@@ -77,7 +84,8 @@ void Player::render(){
 
     current_frame++;
     if(current_frame>9)
-        current_frame=5;
+        this->gameover=true;
+
 
     }
 }

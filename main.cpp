@@ -99,19 +99,14 @@ int main( int argc, char* args[] )
            ){
 
                 player.setZD();
-           // for(int x=5;x<10;x++){
-
-             //   player.render();
-               // background.render();
-                //enemy.render();
-            //SDL_Delay(100);
-            //}
-
             }
 
         background.render();
         player.render();
         enemy.render();
+        if(player.gameover==true){
+            break;
+        }
         //enemy2.render();
         frameCap();
 

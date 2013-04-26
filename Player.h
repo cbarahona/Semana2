@@ -14,11 +14,11 @@ public:
     int velocity;
     int acceleration;
     int current_frame;
-    SDL_Surface *images[9];
+    SDL_Surface *images[10];
     int zd;
     SDL_Surface salti;
     SDL_Surface *screen;
-
+    bool gameover;
     Player(SDL_Surface *screen);
     void setZD();
     void logic();
