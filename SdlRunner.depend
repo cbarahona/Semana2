@@ -91,24 +91,27 @@
 	"SDL/SDL_image.h"
 	<string>
 
-1366396983 source:c:\users\osar\documents\github\semana2\enemy.cpp
+1367001380 source:c:\users\osar\documents\github\semana2\enemy.cpp
 	"Enemy.h"
 
-1366396365 c:\users\osar\documents\github\semana2\enemy.h
+1367001411 c:\users\osar\documents\github\semana2\enemy.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	<string>
 
-1366995245 source:c:\users\osar\documents\github\semana2\main.cpp
+1367087969 source:c:\users\osar\documents\github\semana2\main.cpp
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
+	"SDL/SDL_mixer.h"
 	"Background.h"
 	"Player.h"
 	"Enemy.h"
+	"Coco.h"
 	"Timer.h"
 	<string>
+	"SDL/SDL_ttf.h"
 
-1366994833 c:\users\osar\documents\github\semana2\player.h
+1367085540 c:\users\osar\documents\github\semana2\player.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	<string>
@@ -116,9 +119,17 @@
 1366387617 c:\users\osar\documents\github\semana2\timer.h
 	"SDL/SDL.h"
 
-1366995040 source:c:\users\osar\documents\github\semana2\player.cpp
+1367085798 source:c:\users\osar\documents\github\semana2\player.cpp
 	"Player.h"
 
 1366387617 source:c:\users\osar\documents\github\semana2\timer.cpp
 	"Timer.h"
+
+1367086801 source:c:\users\osar\documents\github\semana2\coco.cpp
+	"Coco.h"
+
+1367086168 c:\users\osar\documents\github\semana2\coco.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<string>
 

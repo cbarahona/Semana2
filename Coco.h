@@ -1,34 +1,34 @@
-#ifndef PLAYER_H
-#define PLAYER_H
-
+#ifndef COCO_H
+#define COCO_H
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 //#include "SDL/SDL_ttf.h"
 #include <string>
 
-class Player
+
+class Coco
 {
-public:
-    int x;
+    public:
+        int x;
     int y;
     int velocity;
     int acceleration;
     int current_frame;
-    SDL_Surface *images[10];
-    int zd;
-    SDL_Surface salti;
+    SDL_Surface *images[6];
     SDL_Surface *screen;
-    bool gameover;
-    bool isJump;
     int frame_lenght;
     int frame_time_elapsed;
-    Player(SDL_Surface *screen);
-    void setZD();
+
+        Coco(SDL_Surface *screen);
+
+        virtual ~Coco();
+        void setX();
     void logic();
     void render();
     void jump();
-    void die();
-    virtual ~Player();
+
+    protected:
+    private:
 };
 
-#endif // PLAYER_H
+#endif // COCO_H

@@ -21,6 +21,9 @@ Player::Player(SDL_Surface *screen)
     this->current_frame=0;
     this->zd=0;
     this->gameover=false;
+    this->frame_lenght=2;
+    this->frame_time_elapsed=0;
+    this->isJump=false;
 }
 
 Player::~Player()
@@ -51,6 +54,7 @@ void Player::logic()
 
 void Player::jump()
 {
+    this->isJump=true;
     this->zd=1;
     velocity=-30;
 
@@ -64,9 +68,14 @@ void Player::render(){
 
     SDL_BlitSurface( images[current_frame], NULL, screen, &offset );
 
+    if(frame_time_elapsed>=frame_lenght){
+        frame_time_elapsed=0;
     current_frame++;
     if(current_frame>3)
         current_frame=0;
+}
+frame_time_elapsed++;
+
     }else if(zd==1){
     offset.x = x - images[4]->w/2;
     offset.y = y - images[4]->h/2;
@@ -74,6 +83,7 @@ void Player::render(){
     SDL_BlitSurface( images[4], NULL, screen, &offset );
     if(this->y==372){
         this->zd=0;
+        this->isJump=false;
     }
     }else if(zd=3){
 
@@ -81,12 +91,17 @@ void Player::render(){
     offset.y = y - images[current_frame]->h/2;
 
     SDL_BlitSurface( images[current_frame], NULL, screen, &offset );
+    if(frame_time_elapsed>=(frame_lenght)){
+        frame_time_elapsed=0;
 
     current_frame++;
-    if(current_frame>9)
+    if(current_frame>9){
         this->gameover=true;
-
-
+        this->zd=0;
+        current_frame=0;
+    }
+    }
+frame_time_elapsed++;
     }
 }
 void Player::setZD(){
