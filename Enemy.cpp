@@ -11,7 +11,7 @@ Enemy::Enemy(SDL_Surface *screen)
     this->acceleration=2;
     this->velocity=0;
     this->current_frame=0;
-     this->frame_lenght=2;
+     this->frame_lenght=1;
     this->frame_time_elapsed=0;
 }
 

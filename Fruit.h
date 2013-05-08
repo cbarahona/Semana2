@@ -1,30 +1,30 @@
-#ifndef ENEMY_H
-#define ENEMY_H
+#ifndef FRUIT_H
+#define FRUIT_H
+
 
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 #include <string>
-
-class Enemy
+class Fruit
 {
-public:
-    int x;
+    public:
+        int x;
     int y;
     int velocity;
     int acceleration;
     int current_frame;
-    SDL_Surface *images[3];
+    SDL_Surface *images;
     SDL_Surface *screen;
     int frame_lenght;
     int frame_time_elapsed;
-
-    Enemy(SDL_Surface *screen);
-    void setX();
+    void atacado(int x,int y);
+    Fruit(SDL_Surface *screen);
     void logic();
     void render();
-    void jump();
-
-    virtual ~Enemy();
+        Fruit();
+        virtual ~Fruit();
+    protected:
+    private:
 };
 
-#endif // ENEMY_H
+#endif // FRUIT_H

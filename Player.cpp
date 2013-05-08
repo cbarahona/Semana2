@@ -24,6 +24,12 @@ Player::Player(SDL_Surface *screen)
     this->frame_lenght=2;
     this->frame_time_elapsed=0;
     this->isJump=false;
+    this->isplay=false;
+    this->quit=false;
+
+    this->jumpp = Mix_LoadWAV( "jump.wav" );
+    this->dieEx = Mix_LoadWAV( "explosion.wav" );
+
 }
 
 Player::~Player()
@@ -107,4 +113,47 @@ frame_time_elapsed++;
 void Player::setZD(){
     this->zd=3;
      this->current_frame=5;
+}
+void Player::ispla(){
+this->isplay=true;
+}
+void Player::atacado(int x,int y){
+if(this->x-x<50
+           && this->x-x>-50
+           && this->y-y<50
+           && this->y-y>-50
+           ){
+
+                this->setZD();
+                Mix_PlayChannel( -1, dieEx, 0 );
+            }
+}
+void Player::ismove(){
+    SDL_Event event;
+//If there's an event to handle
+        if( SDL_PollEvent( &event ) )
+        {
+            //If a key was pressed
+            if( event.type == SDL_KEYDOWN )
+            {
+                //Set the proper message surface
+                switch( event.key.keysym.sym )
+                {
+
+                   case SDLK_UP:
+                        if(this->isJump==false){
+                        this->jump();
+                        Mix_PlayChannel( -1, jumpp, 0 );
+                        }
+                    break;
+                    case SDLK_ESCAPE: this->quit=true;
+                }
+            }
+            //If the user has Xed out the window
+            else if( event.type == SDL_QUIT )
+            {
+                //Quit the program
+                this->quit=true;
+            }
+        }
 }

@@ -38,11 +38,23 @@
 		<Unit filename="Coco.h" />
 		<Unit filename="Enemy.cpp" />
 		<Unit filename="Enemy.h" />
+		<Unit filename="Frames.cpp" />
+		<Unit filename="Frames.h" />
+		<Unit filename="Fruit.cpp" />
+		<Unit filename="Fruit.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
 		<Unit filename="Player.cpp" />
 		<Unit filename="Player.h" />
+		<Unit filename="Print.cpp" />
+		<Unit filename="Print.h" />
+		<Unit filename="StringToint.cpp" />
+		<Unit filename="StringToint.h" />
 		<Unit filename="Timer.cpp" />
 		<Unit filename="Timer.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="pacman.cpp" />
+		<Unit filename="pacman.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

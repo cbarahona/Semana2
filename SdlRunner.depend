@@ -91,27 +91,29 @@
 	"SDL/SDL_image.h"
 	<string>
 
-1367001380 source:c:\users\osar\documents\github\semana2\enemy.cpp
+1367908326 source:c:\users\osar\documents\github\semana2\enemy.cpp
 	"Enemy.h"
 
-1367001411 c:\users\osar\documents\github\semana2\enemy.h
+1367977796 c:\users\osar\documents\github\semana2\enemy.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	<string>
 
-1367087969 source:c:\users\osar\documents\github\semana2\main.cpp
+1367979050 source:c:\users\osar\documents\github\semana2\main.cpp
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
-	"SDL/SDL_mixer.h"
 	"Background.h"
 	"Player.h"
 	"Enemy.h"
 	"Coco.h"
-	"Timer.h"
-	<string>
-	"SDL/SDL_ttf.h"
+	"Frames.h"
+	"Print.h"
+	"Menu.h"
+	"pacman.h"
+	"Fruit.h"
 
-1367085540 c:\users\osar\documents\github\semana2\player.h
+1367973979 c:\users\osar\documents\github\semana2\player.h
+	"SDL/SDL_mixer.h"
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	<string>
@@ -119,16 +121,60 @@
 1366387617 c:\users\osar\documents\github\semana2\timer.h
 	"SDL/SDL.h"
 
-1367085798 source:c:\users\osar\documents\github\semana2\player.cpp
+1367973979 source:c:\users\osar\documents\github\semana2\player.cpp
 	"Player.h"
 
 1366387617 source:c:\users\osar\documents\github\semana2\timer.cpp
 	"Timer.h"
 
-1367086801 source:c:\users\osar\documents\github\semana2\coco.cpp
+1367968340 source:c:\users\osar\documents\github\semana2\coco.cpp
 	"Coco.h"
 
 1367086168 c:\users\osar\documents\github\semana2\coco.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<string>
+
+1367979036 source:c:\users\osar\documents\github\semana2\pacman.cpp
+	"pacman.h"
+
+1367979036 c:\users\osar\documents\github\semana2\pacman.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_mixer.h"
+	<string>
+
+1367972437 source:c:\users\osar\documents\github\semana2\menu.cpp
+	"Menu.h"
+
+1367979390 c:\users\osar\documents\github\semana2\menu.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+
+1367899384 source:c:\users\osar\documents\github\semana2\stringtoint.cpp
+	"StringToint.h"
+
+1367899436 c:\users\osar\documents\github\semana2\stringtoint.h
+	<string>
+
+1367942437 source:c:\users\osar\documents\github\semana2\frames.cpp
+	"Frames.h"
+
+1367900096 c:\users\osar\documents\github\semana2\frames.h
+	"Timer.h"
+
+1367977524 c:\users\osar\documents\github\semana2\print.h
+	"SDL/SDL_ttf.h"
+	"StringToint.h"
+	"SDL/SDL.h"
+
+1367977715 source:c:\users\osar\documents\github\semana2\print.cpp
+	"Print.h"
+
+1367979147 source:c:\users\osar\documents\github\semana2\fruit.cpp
+	"Fruit.h"
+
+1367979036 c:\users\osar\documents\github\semana2\fruit.h
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	<string>
