@@ -114,10 +114,43 @@ int main( int argc, char* args[] )
         enemyCoco.render();
         quit=player.quit;
         if(player.gameover==true){
-                impri.muerte();
-            player.gameover=false;
 
-        break;
+      //If there's an event to handle
+        if( SDL_PollEvent( &event ) )
+        {
+            //If a key was pressed
+            if( event.type == SDL_KEYDOWN )
+            {
+                //Set the proper message surface
+                switch( event.key.keysym.sym )
+                {
+                    case SDLK_ESCAPE: quit = true; break;
+                    case SDLK_SPACE:
+                        player.isplay=true;
+                         impri.muerte();
+            player.gameover=false;
+            impri.score=0;
+            break;
+                }
+            }
+            //If the user has Xed out the window
+            else if( event.type == SDL_QUIT )
+            {
+                //Quit the program
+                quit = true;
+            }
+        }
+        SDL_Rect offset;
+        offset.x = 0;
+        offset.y = 0;
+        SDL_BlitSurface( game_over, NULL, screen, &offset );
+        impri.getScore(screen);
+        if( SDL_Flip( screen ) == -1 )
+        {
+            return 1;
+        }
+
+       // break;
         }else{
         impri.prin(screen);
         }
@@ -129,7 +162,7 @@ int main( int argc, char* args[] )
         }
     }
     }
-    while( quit == false )
+    /*while( quit == false )
     {
         //If there's an event to handle
         if( SDL_PollEvent( &event ) )
@@ -160,7 +193,7 @@ int main( int argc, char* args[] )
             return 1;
         }
         frx.frameCap();
-    }
+    }*/
     //SDL_Quit();
     return 0;
 }
